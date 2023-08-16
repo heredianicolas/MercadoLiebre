@@ -11,9 +11,9 @@ app.listen(port, ()=> console.log("puerto 3000 escuchando"))
 app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname, "/views/home.html"));
 });
-app.get("/views/registro.html",(req,res)=>{
+app.get("/registro.html",(req,res)=>{
     res.sendFile(path.join(__dirname, "/views/registro.html"))
 })
-app.get("/src/views/login.html",(req,res)=>{
+app.get("/login.html",(req,res)=>{
     res.sendFile(path.join(__dirname,"/views/login.html"))
 })

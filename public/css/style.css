@@ -109,6 +109,7 @@ body {
     width: 100%;
     background-color: #ebebeb;
     padding: 10px;
+    transition: box-shadow 0.3s ease;
 }
 .articulos-img{
     width: 100%;
@@ -128,7 +129,10 @@ body {
     top: -15px;
     }
 .camion-envio{
-    position: relative;
+    position: relative;    
+}
+.fa-truck{
+    transition: transform 0.5s ease;
 }
 .articulo-contenido{
     background-color: white;
@@ -139,6 +143,15 @@ body {
 
 .footer-lista{
     text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+}
+.i-footer{
+    color: var(--celeste);
+    transition: color 0.5s
+}
+.footer-lista > li {
+    padding: 20px 0;
 }
 .fa-solid{
     font-size: 2em;
@@ -154,7 +167,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 500px;
+    width: 100%;
     margin: auto;   
     padding: 20px;
 }
@@ -167,7 +180,7 @@ body {
 }
 .radio{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .radio > label{
     margin-right: 15px;
@@ -210,17 +223,17 @@ body {
     border-radius: 5px;
     padding: 5px 5px;
     background-color: var(--celeste);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer; 
+    transition: background-color 0.5s;
 }
 .boton-login>a{
     color: #fff;  
     font-weight: 500;  
 }
-.footer-lista-login{
-    background-color: #ffffff;
-    text-align: center;
-}
 
-.boton{
+/*.boton{
     background-color: var(--grisOscuro);
     border: none;
     color: #fff;
@@ -229,6 +242,18 @@ body {
     padding: 10px;
     margin: 10px 0;
     cursor: pointer;
+} buscar de donde es*/
+.articulos:hover{
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+.fa-truck:hover{
+    transform: rotate(-90deg);
+}
+.boton-login:hover{
+    background-color: #0022AA;
+}
+.i-footer:hover{
+    color: #0022AA;
 }
 @media (min-width: 481px){
     /*{
@@ -301,6 +326,13 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
     }
+    .formulario{
+        width: 500px;
+    }
+    .radio{
+        display: flex;
+        flex-direction: row;
+    }
 }
 @media (min-width: 769px) {
     .nav-listas{
@@ -314,5 +346,13 @@ body {
     }
     .articulos{
         width: 25%;
+    }
+    .formulario{
+        width: 700px;
+    }
+    .footer-lista{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 }
